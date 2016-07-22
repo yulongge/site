@@ -8,7 +8,7 @@ We welcome you to join the development of Hexo. This document will help you thro
 
 Please follow the coding style:
 
-- Follow [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml).
+- Follow [Google JavaScript Style Guide](https://google.github.io/styleguide/javascriptguide.xml).
 - Use soft-tabs with a two space indent.
 - Don't put commas first.
 
@@ -29,14 +29,14 @@ Please follow the coding style:
     {% code %}
     $ git checkout -b new_feature
     {% endcode %}
-    
+
 4. Start hacking.
 5. Push the branch:
 
     {% code %}
     $ git push origin new_feature
     {% endcode %}
-    
+
 6. Create a pull request and describe the change.
 
 ### Notice
@@ -50,7 +50,7 @@ Please follow the coding style:
 
 ## Updating Documentation
 
-The Hexo documentation is open source and you can find the source code on [hexojs/site]. 
+The Hexo documentation is open source and you can find the source code on [hexojs/site].
 
 ### Workflow
 
@@ -62,13 +62,13 @@ The Hexo documentation is open source and you can find the source code on [hexoj
     $ cd site
     $ npm install
     {% endcode %}
-    
+
 3. Start editing the documentation. You can start the server for live previewing.
 
     {% code %}
     $ hexo server
     {% endcode %}
-    
+
 4. Push the branch.
 5. Create a pull request and describe the change.
 

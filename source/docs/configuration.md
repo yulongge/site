@@ -10,8 +10,8 @@ Setting | Description
 `subtitle` | The subtitle of your website
 `description` | The description of your website
 `author` | Your name
-`language` | The language of your website
-`timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+`language` | The language of your website. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). Default is `en`.
+`timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Some examples are `America/New_York`, `Japan`, and `UTC`.
 
 ### URL
 
@@ -26,7 +26,7 @@ Setting | Description | Default
 If your website is in a subdirectory (such as `http://example.org/blog`) set `url` to `http://example.org/blog` and set `root` to `/blog/`.
 {% endnote %}
 
-### Directory 
+### Directory
 
 Setting | Description | Default
 --- | --- | ---
@@ -37,7 +37,7 @@ Setting | Description | Default
 `category_dir` | Category directory | `categories`
 `code_dir` | Include code directory | `downloads/code`
 `i18n_dir` | i18n directory | `:lang`
-`skip_render` | Paths not to be rendered. You can use glob expressions for path matching |
+`skip_render` | Paths not to be rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching |
 
 ### Writing
 

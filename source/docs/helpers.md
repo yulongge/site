@@ -1,6 +1,6 @@
 title: Helpers
 ---
-Helpers are used in templates to help you insert snippets quickly.
+Helpers are used in templates to help you insert snippets quickly.  Helpers cannot be used in source files.
 
 ## URL
 
@@ -23,9 +23,10 @@ Returns the relative URL from `from` to `to`.
 ### gravatar
 
 Inserts a Gravatar image.
+If you don't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
 
 ``` js
-<%- gravatar(email, [size]);
+<%- gravatar(email, [options]);
 ```
 
 **Examples:**
@@ -36,13 +37,16 @@ Inserts a Gravatar image.
 
 <%- gravatar('a@abc.com', 40) %>
 // http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+
+<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
+// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
 ```
 
 ## HTML Tags
 
 ### css
 
-Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll be prefixed with root URL. If you didn't add extension name `.css` after `path`, it'll be added.
+Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll get prefixed with the root URL. If you didn't add the `.css` extension after `path`, it will be added automatically.
 
 ``` js
 <%- css(path, ...) %>
@@ -61,7 +65,7 @@ Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed wi
 
 ### js
 
-Loads JavaScript files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll be prefixed with root URL. If you didn't add extension name `.js` after `path`, it'll be added.
+Loads JavaScript files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll get prefixed with the root URL. If you didn't add the `.js` extension after `path`, it will be added automatically.
 
 ``` js
 <%- js(path, ...) %>
@@ -120,7 +124,7 @@ Option | Description
 `subject` | Mail subject
 `cc` | CC
 `bcc` | BCC
-`body` | Mail contents
+`body` | Mail content
 
 **Examples:**
 
@@ -134,7 +138,7 @@ Option | Description
 
 ### image_tag
 
-Inserts a image.
+Inserts an image.
 
 ``` js
 <%- image_tag(path, [options]) %>
@@ -197,7 +201,7 @@ Check whether the current page is a post.
 
 ### is_archive
 
-Check whether the current page is a archive page.
+Check whether the current page is an archive page.
 
 ``` js
 <%- is_archive() %>
@@ -222,20 +226,24 @@ Check whether the current page is a monthly archive page.
 ### is_category
 
 Check whether the current page is a category page.
+If a string is given as parameter, check whether the current page match the given category.
 
 ``` js
 <%- is_category() %>
+<%- is_category('hobby') %>
 ```
 
 ### is_tag
 
 Check whether the current page is a tag page.
+If a string is given as parameter, check whether the current page match the given tag.
 
 ``` js
 <%- is_tag() %>
+<%- is_tag('hobby') %>
 ```
 
-## String Manipulating
+## String Manipulation
 
 ### trim
 
@@ -315,17 +323,23 @@ Wraps text into lines no longer than `length`. `length` is 80 by default.
 
 ### truncate
 
-Truncates text after `length`.
+Truncates text after certain `length`. Default is 30 characters.
 
 ``` js
-<%- truncate(text, length) %>
+<%- truncate(text, [options]) %>
 ```
 
 **Examples:**
 
 ``` js
-<%- truncate('Once upon a time in a world far far away', 16) %>
-// Once upon a time
+<%- truncate('Once upon a time in a world far far away', {length: 17}) %>
+// Once upon a ti...
+
+<%- truncate('Once upon a time in a world far far away', {length: 17, separator: ' '}) %>
+// Once upon a...
+
+<%- truncate('And they found that many people were sleeping better.', {length: 25, omission: '... (continued)'}) %>
+// And they f... (continued)
 ```
 
 ## Templates
@@ -451,9 +465,10 @@ Option | Description | Default
 `show_count` | Display the number of posts for each category | true
 `style` | Style to display the category list. `list` displays categories in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
-`depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is simliar to `0` but displayed in flat; `1` displays only top level categories. | 0
+`depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is similar to `0` but displayed in flat; `1` displays only top level categories. | 0
 `class` | Class name of category list. | category
 `transform` | The function that changes the display of category name. |
+`suffix` | Add a suffix to link. | None
 
 ### list_tags
 
@@ -473,6 +488,7 @@ Option | Description | Default
 `class` | Class name of tag list. | tag
 `transform` | The function that changes the display of category name. |
 `amount` | The number of tags to display (0 = unlimited) | 0
+`suffix` | Add a suffix to link. | None
 
 ### list_archives
 

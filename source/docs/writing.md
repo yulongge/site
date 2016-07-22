@@ -1,6 +1,6 @@
 title: Writing
 ---
-To create a new post, you can run the following command:
+To create a new post or a new page, you can run the following command:
 
 ``` bash
 $ hexo new [layout] <title>
@@ -10,7 +10,7 @@ $ hexo new [layout] <title>
 
 ### Layout
 
-There are three default layouts in Hexo: `post`, `page` and `draft`. Each of them is saved to a different path. Custom layouts are saved to the `source/_posts` folder.
+There are three default layouts in Hexo: `post`, `page` and `draft`. Files created by each of them is saved to a different path. Newly created posts are saved to the `source/_posts` folder.
 
 Layout | Path
 --- | ---
@@ -28,7 +28,7 @@ By default, Hexo uses the post title as its filename. You can edit the `new_post
 
 Placeholder | Description
 --- | ---
-`:title` | Post title (lower case, with spaces replaced by a hyphen)
+`:title` | Post title (lower case, with spaces replaced by hyphens)
 `:year` | Created year, e.g. `2015`
 `:month` | Created month (leading zeros), e.g. `04`
 `:i_month` | Created month (no leading zeros), e.g. `4`
@@ -37,7 +37,7 @@ Placeholder | Description
 
 ### Drafts
 
-Previously, we mentioned a special layout in Hexo: `draft`. Posts with this layout are saved to `source/_drafts` folder. You can use the `publish` command to move drafts to `source/_posts` folder. This command works in a simliar way to the `new` command.
+Previously, we mentioned a special layout in Hexo: `draft`. Posts initialized with this layout are saved to the `source/_drafts` folder. You can use the `publish` command to move drafts to the `source/_posts` folder. `publish` works in a similar way to the `new` command.
 
 ``` bash
 $ hexo publish [layout] <title>

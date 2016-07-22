@@ -1,6 +1,6 @@
 title: 文件
 ---
-歡迎使用 Hexo，此文件將幫助您快速開始使用。如果您在使用途中遇到任何問題，您可以在 [解決問題](troubleshooting.html) 中找到解答，或者也可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
+歡迎使用 Hexo，此文件將幫助您快速開始使用。如果您在使用途中遇到任何問題，您可以在 [解決問題](docs/troubleshooting.html) 中找到解答，或者也可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
 
 ## 什麼是 Hexo？
 
@@ -31,8 +31,8 @@ $ npm install -g hexo-cli
 
 ### 安裝 Git
 
-- Windows：下載並安裝 [msysgit](http://code.google.com/p/msysgit/).
-- Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或 [安裝程式](http://code.google.com/p/git-osx-installer/) 安裝。
+- Windows：下載並安裝 [git](https://git-scm.com/download/win).
+- Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或 [安裝程式](http://sourceforge.net/projects/git-osx-installer/) 安裝。
 - Linux (Ubuntu, Debian)：`sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core`
 
@@ -55,7 +55,7 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 一旦安裝完成，重啟終端機並執行下列指令以安裝 Node.js。
 
 ``` bash
-$ nvm install 0.12
+$ nvm install 4
 ```
 
 或者您也可以下載 [安裝程式](http://nodejs.org/) 來安裝。

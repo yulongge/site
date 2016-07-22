@@ -16,7 +16,6 @@ $ npm install
 ├── _config.yml
 ├── package.json
 ├── scaffolds
-├── scripts
 ├── source
 |   ├── _drafts
 |   └── _posts
@@ -25,7 +24,7 @@ $ npm install
 
 ### _config.yml
 
-网站的 [配置](configuration.html) 信息，您可以在此配置大部分的参数。
+网站的 [配置](zh-cn/docs/configuration.html) 信息，您可以在此配置大部分的参数。
 
 ### package.json
 
@@ -34,26 +33,28 @@ $ npm install
 ``` json package.json
 {
   "name": "hexo-site",
-  "version": "",
+  "version": "0.0.0",
   "private": true,
   "hexo": {
     "version": ""
   },
   "dependencies": {
-    "hexo-renderer-ejs": "*",
-    "hexo-renderer-stylus": "*",
-    "hexo-renderer-marked": "*"
+    "hexo": "^3.0.0",
+    "hexo-generator-archive": "^0.1.0",
+    "hexo-generator-category": "^0.1.0",
+    "hexo-generator-index": "^0.1.0",
+    "hexo-generator-tag": "^0.1.0",
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-stylus": "^0.2.0",
+    "hexo-renderer-marked": "^0.2.4",
+    "hexo-server": "^0.1.2"
   }
 }
 ```
 
 ### scaffolds
 
-[模版](writing.html) 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。
-
-### scripts
-
-[脚本](plugins.html) 文件夹。脚本是扩展 Hexo 最简易的方式，在此文件夹内的 JavaScript 文件会被自动执行。
+[模版](zh-cn/docs/writing.html) 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。
 
 ### source
 
@@ -61,4 +62,4 @@ $ npm install
 
 ### themes
 
-[主题](themes.html) 文件夹。Hexo 会根据主题来生成静态页面。
+[主题](zh-cn/docs/themes.html) 文件夹。Hexo 会根据主题来生成静态页面。

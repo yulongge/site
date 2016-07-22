@@ -1,6 +1,6 @@
-# Hexo Website
+# Hexo Official Website
 
-[![Build Status](https://travis-ci.org/hexojs/site.svg)](https://travis-ci.org/hexojs/site)
+[![Build Status](https://travis-ci.org/hexojs/site.svg?branch=master)](https://travis-ci.org/hexojs/site)
 
 The website for Hexo. You can see the generated files at [hexojs/hexojs.github.io](https://github.com/hexojs/hexojs.github.io) repository.
 
@@ -28,9 +28,10 @@ $ hexo server
 
 ## Contributors
 
-- English - [tommy351]
-- 正體中文 - [tommy351]
-- 简体中文 - [pinggod]
+- English - [tommy351](https://github.com/tommy351)
+- 正體中文 - [tommy351](https://github.com/tommy351)
+- 简体中文 - [pinggod](https://github.com/pinggod), [Xuanwo](https://github.com/Xuanwo)
+- Русский - [twirlfog](https://github.com/twirlfog)
 
 ## License
 

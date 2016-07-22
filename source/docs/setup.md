@@ -15,7 +15,6 @@ Once initialised, here's what your project folder will look like:
 ├── _config.yml
 ├── package.json
 ├── scaffolds
-├── scripts
 ├── source
 |   ├── _drafts
 |   └── _posts
@@ -55,10 +54,6 @@ Application data. The [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.
 ### scaffolds
 
 [Scaffold](writing.html#Scaffolds) folder. When you create a new post, Hexo bases the new file on the scaffold.
-
-### scripts
-
-[Script](plugins.html#Scripts) folder. Scripts are the easiest way to extend Hexo. JavaScript files in this folder are executed automatically.
 
 ### source
 
